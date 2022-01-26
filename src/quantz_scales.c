@@ -54,14 +54,26 @@ const enum colorCodes qtz_scale_colors[NUM_QTZ_SCALES] = {
 	ledc_LIGHT_BLUE,		// NO QTZ
 	ledc_BRIGHTPINK,		// MAJOR
 	ledc_CORAL,				// MINOR HARMONIC
-	ledc_BLUE				// SEMITONES
+	ledc_BLUE,				// SEMITONES
+	ledc_RED,				// DORIAN
+	ledc_GREEN,				// MINOR PENTATONIC
+	ledc_DIM_YELLOW,			// MINOR PENTATONIC+2ND
+	ledc_PURPLE,				// MAJOR PENTATONIC
+	ledc_GOLD				// 1+4+5
+	
 };
 
 const uint8_t num_qtz_steps[NUM_QTZ_SCALES] = {
 	1,					// NO QTZ
 	7,					// MAJOR
 	7,					// MINOR HARMONIC
-	12					// SEMITONES
+	12,					// SEMITONES
+	7,					// DORIAN
+	5,					// MINOR PENTATONIC
+	6,					// MINOR PENTATONIC+2ND
+	5,					// MAJOR PENTATONIC
+	3					// 1+4+5
+	
 };
 
 const float qtz_scales[NUM_QTZ_SCALES][MAX_NUM_QTZ_STEPS] = {
@@ -134,7 +146,80 @@ const float qtz_scales[NUM_QTZ_SCALES][MAX_NUM_QTZ_STEPS] = {
 		27.50,
 		29.135234375,
 		30.8676953125
+	},
+
+//DORIAN
+	{
+		// 16.35, 			// C0
+		// 18.35225449,	// D
+		// 19.44353633,	// D#
+		// 21.82463162,	// F
+		// 24.49732071,	// G
+		// 27.49731278,	// A
+		// 29.13238808,	// A#
+		16.3516015625,
+		18.3540234375,
+		19.4454296875,
+		21.8267578125,
+		24.4997265625,
+		27.50,
+		29.135234375
+	},
+
+//MINOR PENTATONIC
+	{
+		// 16.35, 			// C0
+		// 19.44353633,	// D#
+		// 21.82463162,	// F
+		// 24.49732071,	// G
+		// 29.13238808,	// A#
+		16.3516015625,
+		19.4454296875,
+		21.8267578125,
+		24.4997265625,
+		29.135234375
+	},
+
+//MINOR PENTATONIC+2ND
+	{
+		// 16.35, 			// C0
+		// 18.35225449,	// D
+		// 19.44353633,	// D#
+		// 21.82463162,	// F
+		// 24.49732071,	// G
+		// 29.13238808,	// A#
+		16.3516015625,
+		18.3540234375,
+		19.4454296875,
+		21.8267578125,
+		24.4997265625,
+		29.135234375
+	},
+
+//MAJOR PENTATONIC
+	{
+		// 16.35, 			// C0
+		// 18.35225449,	// D
+		// 20.59970917,	// E
+		// 24.49732071,	// G
+		// 27.49731278,	// A
+		16.3516015625,
+		18.3540234375,
+		20.60171875,
+		24.4997265625,
+		27.50
+	},
+
+//1+4+5
+	{
+		// 16.35, 			// C0
+		// 21.82463162,	// F
+		// 24.49732071,	// G
+		16.3516015625,
+		21.8267578125,
+		24.4997265625
 	}
+
 };
 
 
